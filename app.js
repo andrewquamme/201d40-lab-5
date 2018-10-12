@@ -54,8 +54,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   // TODO: Write your code here
-  var outputOne = a + b + c;
-  var outputTwo = a * b * c;
+  var outputOne = sum(a,b)[0];
+  outputOne = sum(outputOne,c)[0];
+  var outputTwo = multiply(a, b)[0];
+  outputTwo = multiply(outputTwo, c)[0];
   var messageOne = `${a} and ${b} and ${c} sum to ${outputOne}.`;
   var messageTwo = `The product of ${a} and ${b} and ${c} is ${outputTwo}.`;
   return [outputOne, outputTwo, messageOne, messageTwo];
@@ -81,6 +83,7 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
   // TODO: Write your code here
+  // var output = sum(testArray[0], testArray[1]);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
